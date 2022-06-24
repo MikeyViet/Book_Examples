@@ -1,7 +1,6 @@
 ﻿//Random number generator example from 7.6 in book
 //Shifted and scaled random integers
 
-using System;
 /*
 class RandomIntegers
 
@@ -108,6 +107,7 @@ class ReferenceAndOutputParameters
         // demonstrate that arguments passed by value are not modified
         Console.WriteLine($"Value of y after Square : {y}");
         Console.WriteLine($"Value of z after Square : {z}");
+
     }
 
     // uses reference parameter x to modify caller's variable
@@ -130,6 +130,7 @@ class ReferenceAndOutputParameters
     {
         x = x * x;
     }
+
 
 }
 
