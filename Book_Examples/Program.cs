@@ -104,10 +104,33 @@ class ReferenceAndOutputParameters
         Square(y);
         Square(z);
 
-        // display values of y and z
-        
-
+        // display values of y and z after they're passaed to method Square
+        // demonstrate that arguments passed by value are not modified
+        Console.WriteLine($"Value of y after Square : {y}");
+        Console.WriteLine($"Value of z after Square : {z}");
     }
+
+    // uses reference parameter x to modify caller's variable
+    static void SquareRef(ref int x)
+    {
+        x = x * x;  // squares value of the caller's variable
+    }
+
+    // uses output parameter x to assign a value
+    // to an uninitialized variable
+    static void SquareOut(out int x)
+    {
+        x = 6;      // assigns a value to caller's variable
+        x = x * x;  // squares value of caller's variable
+    }
+
+    // parameter x receives a copy of the value passed as an argument,
+    //  so this method cannot modify the caller's variable
+    static void Square(int x)
+    {
+        x = x * x;
+    }
+
 }
 
 
